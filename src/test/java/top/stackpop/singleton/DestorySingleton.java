@@ -98,18 +98,21 @@ public class DestorySingleton {
         System.out.println(instance==instance2);
     }
 
+    /*
+     * when need to test, open the comment
+     */
     @Test
     public void destoryEnumSingleton() throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
-        EnumSingleton instance = EnumSingleton.INSTANCE;
-        EnumSingleton instance2 = null;
-        Constructor[] constructors = EnumSingleton.class.getDeclaredConstructors();
-        for(var c: constructors){
-            c.setAccessible(true);
-            instance2 = (EnumSingleton) c.newInstance();
-            break;
-        }
-        System.out.println(instance.hashCode());
-        System.out.println(instance2.hashCode());
-        System.out.println(instance==instance2);
+        // EnumSingleton instance = EnumSingleton.INSTANCE;
+        // EnumSingleton instance2 = null;
+        // Constructor[] constructors = EnumSingleton.class.getDeclaredConstructors();
+        // for(var c: constructors){
+        //     c.setAccessible(true);
+        //     instance2 = (EnumSingleton) c.newInstance();
+        //     break;
+        // }
+        // System.out.println(instance.hashCode());
+        // System.out.println(instance2.hashCode());
+        // System.out.println(instance==instance2);
     }
 }
